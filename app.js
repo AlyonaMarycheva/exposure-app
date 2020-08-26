@@ -12,6 +12,7 @@ const middleware = require('./utils/middleware.js');
 const logger = require('./utils/logger.js');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
+const path = require('path');
 
 const app = express();
 
@@ -29,6 +30,15 @@ morgan.token('body', (req, res) => JSON.stringify(req.body));
 const logTemplate = ':method :url :status :res[content-length] - :response-time ms :body';
 
 app.use(express.static('build'));
+app.get('/plans/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.get('/plans', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 app.use(cors());
 app.use(express.json());
 app.use(morgan(logTemplate));
