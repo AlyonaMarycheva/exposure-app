@@ -33,12 +33,6 @@ app.use(express.static('build'));
 app.get('/plans/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-<<<<<<< HEAD
-app.get('/plans', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
-=======
->>>>>>> 37a0c3f502e322d895654da31c3688419fdccfec
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
