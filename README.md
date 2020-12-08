@@ -27,5 +27,6 @@ Extremely convenient way to track your new employees affiliation progress.
 ### сотрудник: 
     username: Denis,
     password: helloworld
-    
+
+![list](screenshots/list.png "Описание будет тут")
     
